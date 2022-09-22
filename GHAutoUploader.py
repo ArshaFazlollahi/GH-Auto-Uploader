@@ -80,7 +80,7 @@ while True:
 		commit2.click()
 		break
 
-lst = os.listdir(d + r'\here')
+lst = os.listdir(d + r'\ '.strip() + folname)
 nof = len(lst)
 
 nouf = 0
@@ -109,7 +109,7 @@ while nouf < nof:
 
 	d = os.getcwd()
 
-	pyautogui.write(d + r'\here')
+	pyautogui.write(d + r'\ ' + folname)
 	pyautogui.press('enter')
 	pyautogui.keyDown('shift')
 	pyautogui.press('tab')
