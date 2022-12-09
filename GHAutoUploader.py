@@ -18,7 +18,7 @@ driver = webdriver.Chrome(PATH)
 driver.get(replink)
 print(driver.title)
 
-link = driver.find_element(By.XPATH, '/html/body/div[1]/header/div/div[2]/div/div/div[2]/a')
+link = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/header/div/div[2]/div/div/div[2]/a')
 link.click()
 
 user = WebDriverWait(driver, 70).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="login_field"]')))
@@ -27,7 +27,7 @@ user.send_keys(usr)
 password = driver.find_element(By.XPATH, '//*[@id="password"]')
 password.send_keys(pss)
 
-sign = driver.find_element(By.XPATH, '//*[@id="login"]/div[4]/form/div/input[12]')
+sign = driver.find_element(By.XPATH, '/html/body/div[1]/div[3]/main/div/div[4]/form/div/input[11]')
 sign.click()
 
 add = WebDriverWait(driver, 70).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-pjax-container"]/div/div/div[3]/div[1]/div[2]/details')))
@@ -42,10 +42,10 @@ folder.send_keys(folname + "/ignore")
 commit = driver.find_element(By.XPATH, '//*[@id="submit-file"]')
 commit.click()
 
-add2 = driver.find_element(By.XPATH, '//*[@id="repo-content-pjax-container"]/div/div/div[1]/div[3]/details[1]/summary/span[1]')
+add2 = driver.find_element(By.XPATH, '/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div/div[1]/div[4]/details[1]/summary/span[1]/span')
 add2.click()
 
-upload = driver.find_element(By.XPATH, '//*[@id="repo-content-pjax-container"]/div/div/div[1]/div[3]/details[1]/div/ul/li[4]/a')
+upload = driver.find_element(By.XPATH, '/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div/div[1]/div[4]/details[1]/div/ul/li[4]/a')
 upload.click()
 
 upload2 = WebDriverWait(driver, 70).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-pjax-container"]/div/div[2]/form[2]/file-attachment/p')))
@@ -117,16 +117,16 @@ while nouf < nof:
 	add3 = WebDriverWait(driver, 70).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-pjax-container"]/div/div/div[3]/div[1]/div[3]/div[3]/div[1]/div[2]/div[2]/span/a')))
 	add3.click()
 
-	add4 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-turbo-frame"]/div/div/div[1]/div[3]/details[1]/summary/span[1]')))
+	add4 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div[1]/div[4]/details[1]/summary/span[1]/span')))
 	add4.click()
 
-	add5 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-turbo-frame"]/div/div/div[1]/div[3]/details[1]/div/ul/li[4]/a')))
+	add5 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div[1]/div[4]/details[1]/div/ul/li[4]/a')))
 	add5.click()
 
-	add5 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-turbo-frame"]/div/div/div[1]/div[3]/details[1]/div/ul/li[4]/a')))
-	add5.click()
+	#add5 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-turbo-frame"]/div/div/div[1]/div[3]/details[1]/div/ul/li[4]/a')))
+	#add5.click()
 
-	upload3 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="repo-content-pjax-container"]/div/div[2]/form[2]/file-attachment/p')))
+	upload3 = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[5]/div/main/turbo-frame/div/div/div[2]/form[2]/file-attachment/p')))
 	upload3.click()
 
 	time.sleep(1)
